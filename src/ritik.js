@@ -9,19 +9,19 @@ class App extends React.Component {
     this.SubOne = this.SubOne.bind(this);
   }
 
-  addOne() {
+  addOne=()=> {
     this.setState({
       counter: this.state.counter + 1
     });
   }
 
-  SubOne() {
+  SubOne=()=> {
     this.setState({
       counter: this.state.counter - 1
     });
   }
 
-  render() {
+  render=()=> {
     return (
       <div>
         <button onClick={this.addOne} class="button">
