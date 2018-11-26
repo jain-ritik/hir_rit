@@ -1,17 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Apps from "./ritik";
+import Inc from "./inc";
+import Dec from "./dec";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello Hiration Interns</h1>
-      <h2>Lets create some miracle!</h2>
-      <Apps />
-    </div>
-  );
+class Parents extends React.Component {
+  /* onslick = () => {
+     this.inc.current.addOne;
+   };
+    <inc ref={this.inc} />
+    */
+  render = () => {
+    return (
+      <div>
+        <Inc
+          ref={instance => {
+            this.inc = instance;
+          }}
+        />
+        <button
+          onClick={() => {
+            this.inc.addOne();
+          }}
+          class="button"
+        >
+          Increment
+        </button>
+        <Dec
+          ref={instance => {
+            this.dnc = instance;
+          }}
+        />
+        <button
+          onClick={() => {
+            this.dnc.addOne();
+          }}
+          class="button button3"
+        >
+          Decrement
+        </button>
+      </div>
+    );
+  };
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Parents />, rootElement);

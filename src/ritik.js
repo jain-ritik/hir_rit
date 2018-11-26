@@ -5,23 +5,21 @@ class App extends React.Component {
     this.state = {
       counter: 0
     };
-    this.addOne = this.addOne.bind(this);
-    this.SubOne = this.SubOne.bind(this);
   }
 
-  addOne=()=> {
+  /* addOne = () => {
     this.setState({
       counter: this.state.counter + 1
     });
-  }
+  };
 
-  SubOne=()=> {
+  SubOne = () => {
     this.setState({
       counter: this.state.counter - 1
     });
-  }
+  }; */
 
-  render=()=> {
+  render = () => {
     return (
       <div>
         <button onClick={this.addOne} class="button">
@@ -31,10 +29,10 @@ class App extends React.Component {
         <button onClick={this.SubOne} class="button button3">
           Decrement
         </button>
-       <h1> {this.state.counter}</h1>
+        <h1> {this.state.counter}</h1>
       </div>
     );
-  }
+  };
 }
 
 export default App;
