@@ -28,12 +28,12 @@ class Parents extends React.Component {
         </button>
         <Dec
           ref={instance => {
-            this.dnc = instance;
+            this.dec = instance;
           }}
         />
         <button
           onClick={() => {
-            this.dnc.addOne();
+            this.dec.Subone();
           }}
           class="button button3"
         >

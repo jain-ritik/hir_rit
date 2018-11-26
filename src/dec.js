@@ -1,4 +1,5 @@
 import React from "react";
+import Inc from "./inc";
 class Dec extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +9,7 @@ class Dec extends React.Component {
       counter: 0
     };
   }
-  addOne = () => {
+  Subone = () => {
     this.setState({
       counter: this.state.counter - 1
     });
