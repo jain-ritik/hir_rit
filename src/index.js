@@ -10,6 +10,14 @@ class Parents extends React.Component {
    };
     <inc ref={this.inc} />
     */
+  fun1 = () => {
+    this.inc.AddOne();
+    this.dec.AddOne();
+  };
+  fun2 = () => {
+    this.inc.SubOne();
+    this.dec.SubOne();
+  };
   render = () => {
     return (
       <div>
@@ -20,7 +28,7 @@ class Parents extends React.Component {
         />
         <button
           onClick={() => {
-            this.inc.addOne();
+            this.fun1();
           }}
           class="button"
         >
@@ -33,7 +41,7 @@ class Parents extends React.Component {
         />
         <button
           onClick={() => {
-            this.dec.Subone();
+            this.fun2();
           }}
           class="button button3"
         >

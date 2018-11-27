@@ -4,9 +4,11 @@
 }
 .button {
   background-color: #4caf50; /* Green */
-  border: none;
+  border: brown;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 32px;
+  justify-content: center;
+  align-content: center;
   text-align: left;
   text-decoration: none;
   display: inline-block;

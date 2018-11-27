@@ -6,21 +6,33 @@ class Inc extends React.Component {
 
     //this.inc = React.createRef();
     this.state = {
-      counter: 0
+      counter: 0,
+      flag: 0
     };
   }
-  addOne = () => {
+  AddOne = () => {
     this.setState({
-      counter: this.state.counter + 1
+      counter: this.state.counter + 1,
+      flag: (this.state.flag = 1)
+    });
+  };
+  SubOne = () => {
+    this.setState({
+      counter: this.state.counter - 1,
+      flag: (this.state.flag = 0)
     });
   };
 
   render = () => {
-    return (
-      <div>
-        <h1> {this.state.counter}</h1>
-      </div>
-    );
+    if (this.state.flag == 1)
+      return (
+        <div>
+          <h1> {this.state.counter}</h1>
+        </div>
+      );
+    else {
+      return <p />;
+    }
   };
 }
 export default Inc;
