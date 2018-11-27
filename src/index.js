@@ -21,11 +21,6 @@ class Parents extends React.Component {
   render = () => {
     return (
       <div>
-        <Inc
-          ref={instance => {
-            this.inc = instance;
-          }}
-        />
         <button
           onClick={() => {
             this.fun1();
@@ -34,6 +29,11 @@ class Parents extends React.Component {
         >
           Increment
         </button>
+        <Inc
+          ref={instance => {
+            this.inc = instance;
+          }}
+        />
         <Dec
           ref={instance => {
             this.dec = instance;
