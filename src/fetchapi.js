@@ -5,8 +5,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
-      isLoaded: false
+      items: []
     };
   }
   componentDidMount() {
@@ -14,22 +13,18 @@ class App extends React.Component {
       .then(res => res.json())
       .then(json => {
         this.setState({
-          isLoaded: true,
           items: json
         });
       });
   }
   render() {
-    var { isLoaded, items } = this.state;
-    if (!isLoaded) {
-      return <div>Loading...</div>;
-    }
+    var { items } = this.state;
     return (
       <div classname="App">
         <ul>
           {items.map(item => (
             <li key="{item.id}">
-              Name: {item.name} | Email: {item.email}
+              Name: {item.name} & Email: {item.email}
             </li>
           ))}
         </ul>
