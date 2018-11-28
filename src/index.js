@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Inc from "./inc";
 import Dec from "./dec";
+import App from "./fetchapi.js";
 import "./styles.css";
 
 class Parents extends React.Component {
@@ -13,32 +14,7 @@ class Parents extends React.Component {
   render = () => {
     return (
       <div>
-        <Inc
-          ref={instance => {
-            this.inc = instance;
-          }}
-        />
-        <button
-          onClick={() => {
-            this.inc.addOne();
-          }}
-          class="button"
-        >
-          Increment
-        </button>
-        <Dec
-          ref={instance => {
-            this.dec = instance;
-          }}
-        />
-        <button
-          onClick={() => {
-            this.dec.Subone();
-          }}
-          class="button button3"
-        >
-          Decrement
-        </button>
+        <App />
       </div>
     );
   };
